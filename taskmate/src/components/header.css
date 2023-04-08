@@ -1,0 +1,13 @@
+
+.navbar{
+    background-color: var(--theme-black);
+}
+
+.container > a{
+    cursor:none;
+}
+
+.navbar-brand > img{
+    height: 3.438rem;
+    width: 3.438rem;
+}

@@ -1,0 +1,21 @@
+
+.taskContainer{
+    position: relative;
+    margin-top: 3.125rem;
+}
+
+.taskContainer > h1{
+text-align: center;
+color: var(--theme-black);
+animation: fade ease-in 2s;
+}
+
+
+.taskContainer > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+

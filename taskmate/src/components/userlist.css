@@ -1,0 +1,80 @@
+h3{
+    margin: 0 0.313rem;
+    font-size: 1.2rem;
+}
+
+ul{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    column-gap: 5px;
+    row-gap: 5px;
+    border-radius: 0.313rem;
+    padding: 5px;
+}
+
+
+ul > li{
+    margin-top: 15px;
+    list-style: none;
+    border-radius: 0.313rem;
+    padding: 2px;
+    background-color: var(--theme-smokewhite);
+}
+
+ul li span{
+    flex-direction: row;
+}
+
+li > p{
+    text-align: center;
+}
+
+button img{
+    margin: 0 0.625rem;
+    width: 30px;
+    height: 30px;
+}
+
+
+.tasklistContainer{
+    margin: 0 50px;
+    padding: 25px;
+    border-radius: 28px;
+    background: #e0e0e0;
+    box-shadow:  30px 30px 60px #a8a8a8,
+                -30px -30px 60px #ffffff;
+    animation: fade ease-in 4s;
+}
+
+.tasklistContainer > div, 
+.tasklistContainer > ul li span{
+    display: flex;
+    justify-content: center;
+}
+
+.tasklistContainer > div{
+    flex-direction: row;
+}
+
+
+.tasklistContainer > div span{
+        position: relative;
+        margin: 0 5px;
+        width: 35px;
+        height: 35px;
+        background-color: var(--theme-black);
+        color: var( --theme-smokewhite);
+        border-radius: 50%
+}
+
+
+.tasklistContainer > div span p{
+   position: absolute;
+   top: 20%;
+   left: 32%;
+}
+
+
+ 
+
+
