@@ -1,21 +1,31 @@
-import { useState } from "react"
 import Logo from "../assests/to-do-list.png"
 import "./form.css"
 
-export const Form = ({tasks, setTasks}) => {
-    const [taskValue, setTaskvalue] = useState('')
+export const Form = ({tasks, setTasks, taskEdit, setTaskEdit}) => {
+
+
     const handleInput = (e) => {
         e.preventDefault()
 
-        const date = new Date()
-        const newInput = 
-        {
-            id: date.getMilliseconds(),
-            name:taskValue,
-            time: `${date.toLocaleTimeString()} ${date.toLocaleDateString()}`
-        }
-
-        setTasks([...tasks, newInput])
+            if(taskEdit.id){
+                const date = new Date()
+                const updatedList = tasks.map( item => (
+                    item.id === taskEdit.id ?{ id: taskEdit.id, name:e.target.task.value, time: `${date.toLocaleTimeString()} ${date.toLocaleDateString()}` } : item
+                ))
+                setTasks(updatedList)
+            } else {
+                const date = new Date()
+                const newInput = 
+                {
+                    id: Math.floor(Math.random() * 10000),
+                    name:e.target.task.value,
+                    time: `${date.toLocaleTimeString()} ${date.toLocaleDateString()}`
+                }
+        
+                setTasks([...tasks, newInput])
+                e.target.task.value = ''
+            }
+         
     }
   return (
     <div className="taskInput">
@@ -24,7 +34,7 @@ export const Form = ({tasks, setTasks}) => {
                 <span className="input-group-text" id="basic-addon1">
                     <img src={Logo} alt="" />
                 </span>
-                <input onChange={(e) => {setTaskvalue(e.target.value)}} value={taskValue} type="text" placeholder="Add Task Item..." aria-label="Username" aria-describedby="basic-addon1"/>
+                <input onChange={ e => {setTaskEdit( {...taskEdit, name: e.target.value})}} value={taskEdit.name} type="text" name="task" placeholder="Add Task Item..." aria-label="Username" aria-describedby="basic-addon1" autoComplete="off"/>
                 <button type="submit">
                     <span className="box">
                         SUBMIT

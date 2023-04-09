@@ -1,7 +1,12 @@
 import { Taskcard } from "./Taskcard"
 import "./userlist.css"
 
-export const Userlist = ({tasks, setTasks}) => {
+export const Userlist = ({tasks, setTasks,  taskEdit, setTaskEdit}) => {
+
+    const handleEdit = (id) =>{
+        const editedListitem = tasks.find( item => ( item.id === id))
+        setTaskEdit(editedListitem)
+    }
 
     const handleDelete = (id) => {
         const userDelete = tasks.filter( item => item.id !== id)
@@ -17,7 +22,7 @@ export const Userlist = ({tasks, setTasks}) => {
         </div>
         <hr />
         <ul>
-         <Taskcard taskList={tasks} handleDelete={handleDelete } />
+         <Taskcard taskList={tasks} handleDelete={handleDelete} handleEdit={handleEdit}/>
         </ul>
    </section>
   )
