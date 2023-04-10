@@ -39,7 +39,7 @@ export const Form = ({tasks, setTasks, taskEdit, setTaskEdit}) => {
                 <input onChange={ e => {setTaskEdit( {...taskEdit, name: e.target.value})}} value={taskEdit.name || ""} type="text" name="task" placeholder="Add Task Item..." aria-label="Username" aria-describedby="basic-addon1" autoComplete="off"/>
                 <button type="submit">
                     <span className="box">
-                        SUBMIT
+                        { taskEdit.id ? "UPDATE" : "SUBMIT"}
                     </span>
                 </button>
             </div>

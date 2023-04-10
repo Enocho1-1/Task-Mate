@@ -1,7 +1,9 @@
+
 h3{
     margin: 0 0.313rem;
     font-size: 1.2rem;
 }
+
 
 ul{
     display: grid;
@@ -67,13 +69,24 @@ button img{
         border-radius: 50%
 }
 
+.tasklistContainer > div span p,
+.tasklistContainer > div span button{
+    position: absolute;
+}
 
 .tasklistContainer > div span p{
-   position: absolute;
    top: 20%;
    left: 32%;
 }
 
+.tasklistContainer > div span button {
+    background-color: var(--theme-blue);
+    color: var(--theme-smokewhite);
+    border-radius: 5px;
+    padding: 5px;
+    top: 75%;
+    right: 50%;
+}
 
  
 
