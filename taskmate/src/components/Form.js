@@ -10,9 +10,11 @@ export const Form = ({tasks, setTasks, taskEdit, setTaskEdit}) => {
             if(taskEdit.id){
                 const date = new Date()
                 const updatedList = tasks.map( item => (
-                    item.id === taskEdit.id ?{ id: taskEdit.id, name:e.target.task.value, time: `${date.toLocaleTimeString()} ${date.toLocaleDateString()}` } : item
+                    item.id === taskEdit.id ? { id: taskEdit.id, name:e.target.task.value, time: `${date.toLocaleTimeString()} ${date.toLocaleDateString()}` } : item
                 ))
                 setTasks(updatedList)
+                setTaskEdit({})
+                taskEdit.name = ''
             } else {
                 const date = new Date()
                 const newInput = 
@@ -23,7 +25,7 @@ export const Form = ({tasks, setTasks, taskEdit, setTaskEdit}) => {
                 }
         
                 setTasks([...tasks, newInput])
-                e.target.task.value = ''
+                setTaskEdit({})
             }
          
     }
@@ -34,7 +36,7 @@ export const Form = ({tasks, setTasks, taskEdit, setTaskEdit}) => {
                 <span className="input-group-text" id="basic-addon1">
                     <img src={Logo} alt="" />
                 </span>
-                <input onChange={ e => {setTaskEdit( {...taskEdit, name: e.target.value})}} value={taskEdit.name} type="text" name="task" placeholder="Add Task Item..." aria-label="Username" aria-describedby="basic-addon1" autoComplete="off"/>
+                <input onChange={ e => {setTaskEdit( {...taskEdit, name: e.target.value})}} value={taskEdit.name || ""} type="text" name="task" placeholder="Add Task Item..." aria-label="Username" aria-describedby="basic-addon1" autoComplete="off"/>
                 <button type="submit">
                     <span className="box">
                         SUBMIT
@@ -42,7 +44,6 @@ export const Form = ({tasks, setTasks, taskEdit, setTaskEdit}) => {
                 </button>
             </div>
         </form>
-        
     </div>
   
   )
