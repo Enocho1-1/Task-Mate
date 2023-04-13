@@ -19,3 +19,14 @@ animation: fade ease-in 2s;
     margin-top: 5rem;
 }
 
+@media (max-width: 480px) {
+    .taskContainer{
+        position: relative;
+        margin-top: 2px;
+    }
+
+    .taskContainer > div{
+        flex-direction: column;
+    }
+}
+  

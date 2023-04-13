@@ -21,6 +21,10 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: var(--theme-gray);
+}
+
 h1,
 h2{
     font-family: 'Montserrat', sans-serif;
@@ -29,6 +33,6 @@ h2{
 main{
     height: 100vh;
     width: 100vw;
-    background-color: var(--theme-gray);
     font-family: 'Montserrat', sans-serif;
 }
+

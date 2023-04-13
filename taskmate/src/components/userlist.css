@@ -90,6 +90,18 @@ button img{
    left: 32%;
 }
 
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    ul{
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 5px;
+        row-gap: 5px;
+        border-radius: 0.313rem;
+        padding: 5px;
+    }
+}
+  
 
  
 

@@ -89,3 +89,20 @@
     border: none;
     background: transparent;
   }
+
+  @media (max-width: 480px) {
+    .taskInput{
+      margin: 45px 50px;
+    }
+
+    .input-group > input{
+      width: 150px;
+    }
+    
+     
+  .taskInput button {
+    position: relative;
+    left: 15%;
+  }
+}
+  
