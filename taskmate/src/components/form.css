@@ -100,9 +100,17 @@
     }
     
      
-  .taskInput button {
-    position: relative;
-    left: 15%;
+    .taskInput button {
+      position: relative;
+      left: 15%;
+    }
+}
+
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px){
+  .taskInput{
+    margin: 45px 50px;
   }
 }
   

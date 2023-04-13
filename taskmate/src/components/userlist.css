@@ -102,7 +102,15 @@ button img{
     }
 }
   
-
- 
+  
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px){
+    .tasklistContainer{
+        height: 25rem;
+        width: 700px;
+        overflow-y: scroll;
+      
+    }
+}
 
 
