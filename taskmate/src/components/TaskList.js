@@ -11,6 +11,7 @@ export const TaskList = () => {
     useEffect( () => {
        localStorage.setItem("taskList", JSON.stringify(taskList))
     },[taskList])
+    
   return (
     <section className="taskContainer">
         <h1>Task Mate App</h1>

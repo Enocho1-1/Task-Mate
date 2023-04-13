@@ -14,7 +14,6 @@ export const Form = ({tasks, setTasks, taskEdit, setTaskEdit}) => {
                 ))
                 setTasks(updatedList)
                 setTaskEdit({})
-                taskEdit.name = ''
             } else {
                 const date = new Date()
                 const newInput = 
