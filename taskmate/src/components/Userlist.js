@@ -19,6 +19,7 @@ export const Userlist = ({tasks, setTasks,  taskEdit, setTaskEdit}) => {
             <span>
                 <p>{tasks.length}</p>
             </span>
+            <button className="clear" onClick={() => {setTasks([])}}>CLEAR</button>
         </div>
         <hr />
         <ul>

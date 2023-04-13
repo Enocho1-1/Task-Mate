@@ -41,7 +41,7 @@ button img{
 .tasklistContainer{
     margin: 0 50px;
     padding: 25px;
-    height: 31.25rem;
+    height: 25rem;
     overflow-y: scroll;
     border-radius: 28px;
     background: #e0e0e0;
@@ -71,8 +71,17 @@ button img{
         border-radius: 50%
 }
 
-.tasklistContainer > div span p,
-.tasklistContainer > div span button{
+.tasklistContainer > div button{
+    background-color: var(--theme-blue);
+    color: var(--theme-smokewhite);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0 25px;
+    cursor: pointer;
+  }
+  
+
+.tasklistContainer > div span p{
     position: absolute;
 }
 
@@ -81,14 +90,6 @@ button img{
    left: 32%;
 }
 
-.tasklistContainer > div span button {
-    background-color: var(--theme-blue);
-    color: var(--theme-smokewhite);
-    border-radius: 5px;
-    padding: 5px;
-    top: 75%;
-    right: 50%;
-}
 
  
 
