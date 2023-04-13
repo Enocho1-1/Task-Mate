@@ -41,6 +41,8 @@ button img{
 .tasklistContainer{
     margin: 0 50px;
     padding: 25px;
+    height: 31.25rem;
+    overflow-y: scroll;
     border-radius: 28px;
     background: #e0e0e0;
     box-shadow:  30px 30px 60px #a8a8a8,
